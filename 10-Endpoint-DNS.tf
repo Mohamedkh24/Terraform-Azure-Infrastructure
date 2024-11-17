@@ -19,7 +19,7 @@ resource "azurerm_private_endpoint" "priv-endpoint" {
 
 # Creating the Private DNS Zone
 resource "azurerm_private_dns_zone" "dns-zone" {
-  name = "dnszone.db"
+  name = "privatelink.database.windows.net"
   resource_group_name = var.RG-name
   depends_on = [ azurerm_resource_group.Terraform-RG ]
 }
