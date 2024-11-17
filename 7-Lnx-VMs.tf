@@ -51,7 +51,7 @@ resource "azurerm_storage_account" "lnxstorageacc12" {
 resource "azurerm_storage_share" "premiumfileshare" {
   name = "premiumfileshare"
   storage_account_name = azurerm_storage_account.lnxstorageacc12.name
-  enabled_protocol = "SMB"
+  enabled_protocol = "NFS"
   quota = 100            # means 100GB
   depends_on = [ azurerm_storage_account.lnxstorageacc12 ]
 }
